@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "example.com/project/protos/arithmetic";
+
+package structs;
+
+service ArithmeticService {
+  rpc SendArithmetic (ArithmeticRequest) returns (ArithmeticResponse) {}
+}
+
+message ArithmeticRequest {
+  int32 arg = 1;
+}
+
+message ArithmeticResponse {
+  int32 result = 1;
+}
